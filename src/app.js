@@ -42,8 +42,8 @@
   }
 
   // initialize pusher
-  var pusher = new Pusher('INSERT_PUSHER_APP_KEY_HERE', {
-    cluster: 'INSERT_PUSHER_CLUSTER_HERE',
+  var pusher = new Pusher('13050cf3ab03f24e6952', {
+    cluster: 'us2',
     encrypted: true
   });
 
@@ -63,8 +63,8 @@
       // set the name
       welcomeHeading.innerHTML = 'Hi! <strong>' + username +
         (mode === 'user'
-          ? '</strong>, type in your  friend\'s name to track your food.' 
-          : '</strong>, type in the host friend\'s to locate the address');
+          ? '</strong>, type in your  friend\'s name to track them.' 
+          : '</strong>, type in the host friend\'s to locate them');
       // show the delivery hero's div now
       deliveryHeroBox.classList.remove('hidden');
 
