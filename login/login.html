@@ -1,7 +1,6 @@
 <html>
 <head>
   <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="require.js"></script>
 </head>
 <body>
 
@@ -19,7 +18,7 @@
 </form>
 
 </body>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
 /*function get_values() {
@@ -33,16 +32,12 @@
 };*/
 $(function() {
   $('input[name="button1"]').click(function() {
-    var data = {
-        username: $('#email').val(),
-        password: $('#password').val(),
-    };
-    console.log(data);
-    axios({
-      method: 'post',
-      url: '/create-user',
-      data: data
-    })
+
+    axios.post('http://localhost:3000/create-user', {user:{
+        $('#email').val(),
+        $('#password').val()
+    }
+  });
     .then(function (response) {
       console.log(response);
     })
