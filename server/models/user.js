@@ -9,12 +9,12 @@ const userSchema = new mongoose.Schema({
       message: "{VALUE} is not a valid email"
     }
   },
-  password:{type:String,required:true}
-  /*
+  password:{type:String,required:true},
+
   lat:{type:Number,required:false},
   lng:{type:Number,required:false},
-  status:{type:Number,required:false},
-  */
+  status:{type:Number,required:false}
+  
 });
 userSchema.pre("save", function(next) {
   const user = this;
