@@ -3,10 +3,18 @@ const bodyParser=require('body-parser');
 const app = express();
 const {User}=require("./models/user.js");
 const mongoose = require('./config/mongoose.js');
-
+const cors = require('cors')
 app.use(bodyParser.json());
 
+
+
+
+
 app.post("/create-user",(req,res)=>{
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+
+  console.log("Creating New User");
   const {email,password,lat,lng,status}=req.body;
   User.findOne({email:email}).then(
     user=>{
