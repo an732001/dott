@@ -41,11 +41,14 @@
     });
   }
 
+
+
   // initialize pusher
   var pusher = new Pusher('13050cf3ab03f24e6952', {
     cluster: 'us2',
     encrypted: true
   });
+
 
   // add eventlisteners
   saveNameButton.addEventListener('click', saveName);
