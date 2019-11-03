@@ -1,6 +1,7 @@
 <html>
 <head>
   <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="require.js"></script>
 </head>
 <body>
 
@@ -20,6 +21,7 @@
 </body>
 
 <script>
+
 /*function get_values() {
     var data = {
         email: document.getElementById('email').value,
@@ -31,11 +33,23 @@
 };*/
 $(function() {
   $('input[name="button1"]').click(function() {
-    $.post(your_url, $(this).closest('form').serialize(), function(data) {
-       console.log(data);
+    var data = {
+        username: $('#email').val(),
+        password: $('#password').val(),
+    };
+    console.log(data);
+    axios({
+      method: 'post',
+      url: '/create-user',
+      data: data
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
     });
   });
-  window.location.href = "https://intense-taiga-41328.herokuapp.com/";
 });
 </script>
 </html>
