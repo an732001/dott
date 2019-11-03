@@ -13,5 +13,13 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "pusher": "^1.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/an732001/dott.git"
+  },
+  "bugs": {
+    "url": "https://github.com/an732001/dott/issues"
+  },
+  "homepage": "https://github.com/an732001/dott#readme"
 }
