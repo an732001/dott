@@ -3,6 +3,9 @@
 
 To install do 
 
-`npm init`
-
 `npm install`
+
+
+To run do
+
+`npm start`
