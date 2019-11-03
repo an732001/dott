@@ -1,10 +1,8 @@
-// tinyurl.com/hd-react
-
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 
-const CREATE_USER_ENDPOINT = "http://localhost:3000";
+const CREATE_USER_ENDPOINT = "http://localhost:3000/create-user";
 const MAX_INPUT_WIDTH = "150px";
 
 const rootEl = document.getElementById("root");

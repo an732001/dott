@@ -6,10 +6,6 @@ const mongoose = require('./config/mongoose.js');
 
 app.use(bodyParser.json());
 
-app.get("/",(req,res)=>{
-  res.send('Hello World!!');
-})
-
 app.post("/create-user",(req,res)=>{
   const {email,password}=req.body;
   User.findOne({email:email}).then(
