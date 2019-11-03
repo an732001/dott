@@ -20,7 +20,6 @@
 
   // mode - user's or delivery guy's
   var mode = getUrlParameter('mode') || 'user';
-
   // load the map
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
