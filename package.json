@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.17.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "pusher": "^1.5.1"
   },
   "repository": {
